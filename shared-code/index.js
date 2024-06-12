@@ -1,4 +1,10 @@
 // shared-code/index.js
-export function add(a, b) {
+const add = (a, b) => {
     return a + b;
 }
+
+const product = (a, b) => {
+    return a * b;
+}
+
+export { add, product };

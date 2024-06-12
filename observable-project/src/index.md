@@ -2,17 +2,13 @@
 
 ```js
 import { add } from './add.js';
-import { addShared } from './add-shared.js';
-import { add as addSharedSecond } from 'shared-code';
+import { addIndirectImport } from './add-shared.js';
+import { add as addDirectImport } from 'shared-code';
 ```
 
-```js
-const localSum = add(1, 2);
-const sharedSum = addShared(3, 4);
-```
 
-Sum from local module: ${localSum}
+Sum defined in this project: ${add(1, 1)}
 
-Sum from shared module: ${sharedSum}
+Sum imported via a local javascript file:  ${addIndirectImport(3, 4)}
 
-Sum from shared module (second import): ${addSharedSecond(5, 6)}
+Sum imported in this notebook: ${addDirectImport(5, 6)}
