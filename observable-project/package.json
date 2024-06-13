@@ -9,8 +9,10 @@
     "observable": "observable"
   },
   "dependencies": {
-    "@observablehq/framework": "^1.7.1",
-    "shared-code": "1.0.0"
+    "@aws-sdk/client-s3": "^3.596.0",
+    "@observablehq/framework": "^1.9.0",
+    "shared-code": "1.0.0",
+    "shared-code-with-s3-loader": "1.0.0"
   },
   "devDependencies": {
     "rimraf": "^5.0.5"
