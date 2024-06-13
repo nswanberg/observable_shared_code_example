@@ -1,7 +1,11 @@
 # observable_shared_code_example
 POC for using Observable Framework with NPM Workspaces to share common code.
 
-This simple case works, but as of 1.7.1, we need to clear the .observablehq/cache directory to get the latest changes to the shared code.
+Two small issues to note:
+- clear the .observablehq/cache directory after updating the shared code so that new code can be loaded.
+- We'll need two separate packages for shared code: one for packages that can run in the browser,
+  like lodash and mermaid, and one for packages that that use node APIs that are not
+    available in the browser, like the AWS SDK. 
 
 ## To run
 
